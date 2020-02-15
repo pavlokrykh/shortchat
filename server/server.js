@@ -1,5 +1,6 @@
 "use strict";
 
+var PORT = process.env.PORT || 7777;
 const express = require('express');
 const app = express();
 const nunjucks = require('nunjucks');
@@ -37,6 +38,6 @@ require('./router')(app);
 require('./sockets')(io);
 
 
-server.listen(7777, '0.0.0.0', () => {
+server.listen(PORT, '0.0.0.0', () => {
     console.log('Server started on port 7777.');
 });
