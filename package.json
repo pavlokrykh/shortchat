@@ -12,6 +12,9 @@
     "express"
   ],
   "author": "Pavlo Krykh",
+  "engines": {
+    "node": "12.16.0"
+  },
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
