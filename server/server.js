@@ -21,7 +21,7 @@ passport.use(new Strategy(jwt, function(jwt_payload, done) {
     done();
 }));
 
-mongoose.connect('mongodb://localhost:27017/chat', {useNewUrlParser: true, useUnifiedTopology: true}); // {useMongoClient: true} );
+mongoose.connect('mongodb+srv://suteki1:cyberia@suteki1-o2opv.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}); // {useMongoClient: true} );
 mongoose.Promise = require('bluebird');
 mongoose.set('debug', true);
 
@@ -38,8 +38,5 @@ require('./sockets')(io);
 
 
 server.listen(PORT, '0.0.0.0', () => {
-    console.log(process.env.Server);
-    console.log(process.env.server);
-    console.log(process.env.app);
-    console.log(process.env.mongoose);
+    console.log("Server started at port " + PORT);
 });
