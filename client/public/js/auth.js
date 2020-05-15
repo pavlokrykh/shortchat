@@ -28,7 +28,7 @@ $(".logout-btn").on('click', e => {
 });
 
 $( document ).ready( () => {
-    var socket = io.connect('http://shortchat.eu-4.evennode.com');
+    var socket = io.connect('https://shortchat.herokuapp.com/');
     socket.on('connected', function (msg) {
         console.log(msg);
         socket.emit('receiveHistory');
